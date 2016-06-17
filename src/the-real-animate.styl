@@ -7,7 +7,6 @@ $__animateUsedKeyframes = ()
 
 // Mixin
 animate($name, $duration = $__animateDuration, $delay = null)
-  $extraProps = false
   $cachedProps = ()
   // Check bank
   if $name in $__animateBank
@@ -19,15 +18,13 @@ animate($name, $duration = $__animateDuration, $delay = null)
       // Create keyframe entry
       @keyframes {$name}
         for $stop, $styles in $__animateBank[$name]
-          if $stop != default
+          if $stop is not 'default'
             {$stop}
               for $prop, $value in $styles
                 {$prop}: $value
                 // Get props to accelerate
                 if $__animateCaching and !($prop in $cachedProps)
                   push($cachedProps, $prop)
-          else
-            $extraProps = $styles
 
     // Set animation properties on element
     animation-name: $name
@@ -37,8 +34,8 @@ animate($name, $duration = $__animateDuration, $delay = null)
     animation-fill-mode: both // animate.css default
 
     // Add extra animation defaults
-    if $extraProps
-      for $prop, $value in $extraProps
+    if default in $__animateBank[$name]
+      for $prop, $value in $__animateBank[$name].default
         {$prop}: $value
 
     // Hardware acceleration
