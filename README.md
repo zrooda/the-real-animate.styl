@@ -1,7 +1,7 @@
 # the-real-animate.styl
 
 Stylus | [SASS](https://github.com/mystrdat/the-real-animate.sass)  
-  
+
 **TL;DR** The [animate.css](https://github.com/daneden/animate.css) port to Stylus that you're looking for.
 
 - Keyframes are rendered automatically on first use, no extra imports needed, no duplicates
@@ -9,7 +9,7 @@ Stylus | [SASS](https://github.com/mystrdat/the-real-animate.sass)
 - Automatic optimization for animated properties
 - Stylus hashes as data source (JSON-like)
 
-```Sass
+```Stylus
 @import 'src/the-real-animate'
 
 my-widget
