@@ -1,0 +1,516 @@
+$__animateBank = {
+
+  // Attention Seekers
+
+  bounce: {
+    default: {transform-origin: center bottom},
+    '0%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, 0, 0)},
+    '20%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, 0, 0)},
+    '40%': {animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060), transform: translate3d(0, -30px, 0)},
+    '43%': {animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060), transform: translate3d(0, -30px, 0)},
+    '53%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, 0, 0)},
+    '70%': {animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060), transform: translate3d(0, -15px, 0)},
+    '80%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, 0, 0)},
+    '90%': {transform: translate3d(0, -4px, 0)},
+    '100%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, 0, 0)}
+  },
+
+  flash: {
+    '0%': {opacity: 1},
+    '25%': {opacity: 0},
+    '50%': {opacity: 1},
+    '75%': {opacity: 0},
+    '100%': {opacity: 1}
+  },
+
+  headShake: {
+    default: {animation-timing-function: ease-in-out},
+    '0%': {transform: translateX(0)},
+    '6.5%': {transform: translateX(-6px) rotateY(-9deg)},
+    '18.5%': {transform: translateX(5px) rotateY(7deg)},
+    '31.5%': {transform: translateX(-3px) rotateY(-5deg)},
+    '43.5%': {transform: translateX(2px) rotateY(3deg)},
+    '50%': {transform: translateX(0)}
+  },
+
+  jello: {
+    default: {transform-origin: center},
+    '0%': {transform: none},
+    '11.1%': {transform: none},
+    '22.2%': {transform: skewX(-12.5deg) skewY(-12.5deg)},
+    '33.3%': {transform: skewX(6.25deg) skewY(6.25deg)},
+    '44.4%': {transform: skewX(-3.125deg) skewY(-3.125deg)},
+    '55.5%': {transform: skewX(1.5625deg) skewY(1.5625deg)},
+    '66.6%': {transform: skewX(-0.78125deg) skewY(-0.78125deg)},
+    '77.7%': {transform: skewX(0.390625deg) skewY(0.390625deg)},
+    '88.8%': {transform: skewX(-0.1953125deg) skewY(-0.1953125deg)},
+    '100%': {transform: none}
+  },
+
+  pulse: {
+    '0%': {transform: scale3d(1, 1, 1)},
+    '50%': {transform: scale3d(1.05, 1.05, 1.05)},
+    '100%': {transform: scale3d(1, 1, 1)}
+  },
+
+  rubberBand: {
+    '0%': {transform: scale3d(1, 1, 1)},
+    '30%': {transform: scale3d(1.25, 0.75, 1)},
+    '40%': {transform: scale3d(0.75, 1.25, 1)},
+    '50%': {transform: scale3d(1.15, 0.85, 1)},
+    '65%': {transform: scale3d(.95, 1.05, 1)},
+    '75%': {transform: scale3d(1.05, .95, 1)},
+    '100%': {transform: scale3d(1, 1, 1)}
+  },
+
+  shake: {
+    '0%': {transform: translate3d(0, 0, 0)},
+    '10%': {transform: translate3d(-10px, 0, 0)},
+    '20%': {transform: translate3d(10px, 0, 0)},
+    '30%': {transform: translate3d(-10px, 0, 0)},
+    '40%': {transform: translate3d(10px, 0, 0)},
+    '50%': {transform: translate3d(-10px, 0, 0)},
+    '60%': {transform: translate3d(10px, 0, 0)},
+    '70%': {transform: translate3d(-10px, 0, 0)},
+    '80%': {transform: translate3d(10px, 0, 0)},
+    '90%': {transform: translate3d(-10px, 0, 0)},
+    '100%': {transform: translate3d(0, 0, 0)}
+  },
+
+  swing: {
+    default: {transform-origin: top center},
+    '20%': {transform: rotate3d(0, 0, 1, 15deg)},
+    '40%': {transform: rotate3d(0, 0, 1, -10deg)},
+    '60%': {transform: rotate3d(0, 0, 1, 5deg)},
+    '80%': {transform: rotate3d(0, 0, 1, -5deg)},
+    '100%': {transform: rotate3d(0, 0, 1, 0deg)}
+  },
+
+  tada: {
+    '0%': {transform: scale3d(1, 1, 1)},
+    '10%': {transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)},
+    '20%': {transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)},
+    '30%': {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)},
+    '40%': {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)},
+    '50%': {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)},
+    '60%': {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)},
+    '70%': {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)},
+    '80%': {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)},
+    '90%': {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)},
+    '100%': {transform: scale3d(1, 1, 1)}
+  },
+
+  wobble: {
+    '0%': {transform: none},
+    '15%': {transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg)},
+    '30%': {transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg)},
+    '45%': {transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg)},
+    '60%': {transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg)},
+    '75%': {transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg)},
+    '100%': {transform: none}
+  },
+
+  // Bouncing Entrances
+
+  bounceIn: {
+    '0%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 0, transform: scale3d(.3, .3, .3)},
+    '20%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: scale3d(1.1, 1.1, 1.1)},
+    '40%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: scale3d(.9, .9, .9)},
+    '60%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 1, transform: scale3d(1.03, 1.03, 1.03)},
+    '80%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: scale3d(.97, .97, .97)},
+    '100%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 1, transform: scale3d(1, 1, 1)}
+  },
+
+  bounceInDown: {
+    '0%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 0, transform: translate3d(0, -3000px, 0)},
+    '60%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 1, transform: translate3d(0, 25px, 0)},
+    '75%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, -10px, 0)},
+    '90%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, 5px, 0)},
+    '100%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: none}
+  },
+
+  bounceInLeft: {
+    '0%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 0, transform: translate3d(-3000px, 0, 0)},
+    '60%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 1, transform: translate3d(25px, 0, 0)},
+    '75%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(-10px, 0, 0)},
+    '90%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(5px, 0, 0)},
+    '100%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: none}
+  },
+
+  bounceInRight: {
+    '0%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 0, transform: translate3d(3000px, 0, 0)},
+    '60%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 1, transform: translate3d(-25px, 0, 0)},
+    '75%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(10px, 0, 0)},
+    '90%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(-5px, 0, 0)},
+    '100%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: none}
+  },
+
+  bounceInUp: {
+    '0%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 0, transform: translate3d(0, 3000px, 0)},
+    '60%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity: 1, transform: translate3d(0, -25px, 0)},
+    '75%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, 10px, 0)},
+    '90%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, -5px, 0)},
+    '100%': {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000), transform: translate3d(0, 0, 0)}
+  },
+
+  // Bouncing Exits
+
+  bounceOut: {
+    '20%': {transform: scale3d(.9, .9, .9)},
+    '50%': {opacity: 1, transform: scale3d(1.1, 1.1, 1.1)},
+    '55%': {opacity: 1, transform: scale3d(1.1, 1.1, 1.1)},
+    '100%': {opacity: 0, transform: scale3d(.3, .3, .3)}
+  },
+
+  bounceOutDown: {
+    '20%': {transform: translate3d(0, 10px, 0)},
+    '40%': {opacity: 1, transform: translate3d(0, -20px, 0)},
+    '45%': {opacity: 1, transform: translate3d(0, -20px, 0)},
+    '100%': {opacity: 0, transform: translate3d(0, 2000px, 0)}
+  },
+
+  bounceOutLeft: {
+    '20%': {opacity: 1, transform: translate3d(20px, 0, 0)},
+    '100%': {opacity: 0, transform: translate3d(-2000px, 0, 0)}
+  },
+
+  bounceOutRight: {
+    '20%': {opacity: 1, transform: translate3d(-20px, 0, 0)},
+    '100%': {opacity: 0, transform: translate3d(2000px, 0, 0)}
+  },
+
+  bounceOutUp: {
+    '20%': {transform: translate3d(0, -10px, 0)},
+    '40%': {opacity: 1, transform: translate3d(0, 20px, 0)},
+    '45%': {opacity: 1, transform: translate3d(0, 20px, 0)},
+    '100%': {opacity: 0, transform: translate3d(0, -2000px, 0)}
+  },
+
+  // Fading Entrances
+
+  fadeIn: {
+    '0%': {opacity: 0},
+    '100%': {opacity: 1}
+  },
+
+  fadeInDown: {
+    '0%': {opacity: 0, transform: translate3d(0, -100%, 0)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  fadeInDownBig: {
+    '0%': {opacity: 0, transform: translate3d(0, -2000px, 0)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  fadeInLeft: {
+    '0%': {opacity: 0, transform: translate3d(-100%, 0, 0)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  fadeInLeftBig: {
+    '0%': {opacity: 0, transform: translate3d(-2000px, 0, 0)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  fadeInRight: {
+    '0%': {opacity: 0, transform: translate3d(100%, 0, 0)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  fadeInRightBig: {
+    '0%': {opacity: 0, transform: translate3d(2000px, 0, 0)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  fadeInUp: {
+    '0%': {opacity: 0, transform: translate3d(0, 100%, 0)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  fadeInUpBig: {
+    '0%': {opacity: 0, transform: translate3d(0, 2000px, 0)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  // Fading Exits
+
+  fadeOut: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0}
+  },
+
+  fadeOutDown: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(0, 100%, 0)}
+  },
+
+  fadeOutDownBig: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(0, 2000px, 0)}
+  },
+
+  fadeOutLeft: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(-100%, 0, 0)}
+  },
+
+  fadeOutLeftBig: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(-2000px, 0, 0)}
+  },
+
+  fadeOutRight: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(100%, 0, 0)}
+  },
+
+  fadeOutRightBig: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(2000px, 0, 0)}
+  },
+
+  fadeOutUp: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(0, -100%, 0)}
+  },
+
+  fadeOutUpBig: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(0, -2000px, 0)}
+  },
+
+  // Flippers
+
+  flip: {
+    default: {backface-visibility: visible},
+    '0%': {transform: perspective(400px) rotate3d(0, 1, 0, -360deg), animation-timing-function: ease-out},
+    '40%': {transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg), animation-timing-function: ease-out},
+    '50%': {transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg), animation-timing-function: ease-in},
+    '80%': {transform: perspective(400px) scale3d(.95, .95, .95), animation-timing-function: ease-in},
+    '100%': {transform: perspective(400px), animation-timing-function: ease-in}
+  },
+
+  flipInX: {
+    default: {backface-visibility: visible !important},
+    '0%': {transform: perspective(400px) rotate3d(1, 0, 0, 90deg), animation-timing-function: ease-in, opacity: 0},
+    '40%': {transform: perspective(400px) rotate3d(1, 0, 0, -20deg), animation-timing-function: ease-in},
+    '60%': {transform: perspective(400px) rotate3d(1, 0, 0, 10deg), opacity: 1},
+    '80%': {transform: perspective(400px) rotate3d(1, 0, 0, -5deg)},
+    '100%': {transform: perspective(400px)}
+  },
+
+  flipInY: {
+    default: {backface-visibility: visible !important},
+    '0%': {transform: perspective(400px) rotate3d(0, 1, 0, 90deg), animation-timing-function: ease-in, opacity: 0},
+    '40%': {transform: perspective(400px) rotate3d(0, 1, 0, -20deg), animation-timing-function: ease-in},
+    '60%': {transform: perspective(400px) rotate3d(0, 1, 0, 10deg), opacity: 1},
+    '80%': {transform: perspective(400px) rotate3d(0, 1, 0, -5deg)},
+    '100%': {transform: perspective(400px)}
+  },
+
+  flipOutX: {
+    default: {backface-visibility: visible !important},
+    '0%': {transform: perspective(400px)},
+    '30%': {transform: perspective(400px) rotate3d(1, 0, 0, -20deg), opacity: 1},
+    '100%': {transform: perspective(400px) rotate3d(1, 0, 0, 90deg), opacity: 0}
+  },
+
+  flipOutY: {
+    default: {backface-visibility: visible !important},
+    '0%': {transform: perspective(400px)},
+    '30%': {transform: perspective(400px) rotate3d(0, 1, 0, -15deg), opacity: 1},
+    '100%': {transform: perspective(400px) rotate3d(0, 1, 0, 90deg), opacity: 0}
+  },
+
+  // Lightspeed
+
+  lightSpeedIn: {
+    default: {animation-timing-function: ease-out},
+    '0%': {transform: translate3d(100%, 0, 0) skewX(-30deg), opacity: 0},
+    '60%': {transform: skewX(20deg), opacity: 1},
+    '80%': {transform: skewX(-5deg), opacity: 1},
+    '100%': {transform: none, opacity: 1}
+  },
+
+  lightSpeedOut: {
+    default: {animation-timing-function: ease-in},
+    '0%': {opacity: 1},
+    '100%': {transform: translate3d(100%, 0, 0) skewX(30deg), opacity: 0}
+  },
+
+  // Rotating Entrances
+
+  rotateIn: {
+    '0%': {transform-origin: center, transform: rotate3d(0, 0, 1, -200deg), opacity: 0},
+    '100%': {transform-origin: center, transform: none, opacity: 1}
+  },
+
+  rotateInDownLeft: {
+    '0%': {transform-origin: left bottom, transform: rotate3d(0, 0, 1, -45deg), opacity: 0},
+    '100%': {transform-origin: left bottom, transform: none, opacity: 1}
+  },
+
+  rotateInDownRight: {
+    '0%': {transform-origin: right bottom, transform: rotate3d(0, 0, 1, 45deg), opacity: 0},
+    '100%': {transform-origin: right bottom, transform: none, opacity: 1}
+  },
+
+  rotateInUpLeft: {
+    '0%': {transform-origin: left bottom, transform: rotate3d(0, 0, 1, 45deg), opacity: 0},
+    '100%': {transform-origin: left bottom, transform: none, opacity: 1}
+  },
+
+  rotateInUpRight: {
+    '0%': {transform-origin: right bottom, transform: rotate3d(0, 0, 1, -90deg), opacity: 0},
+    '100%': {transform-origin: right bottom, transform: none, opacity: 1}
+  },
+
+  // Rotating Exits
+
+  rotateOut: {
+    '0%': {transform-origin: center, opacity: 1},
+    '100%': {transform-origin: center, transform: rotate3d(0, 0, 1, 200deg), opacity: 0}
+  },
+
+  rotateOutDownLeft: {
+    '0%': {transform-origin: left bottom, opacity: 1},
+    '100%': {transform-origin: left bottom, transform: rotate3d(0, 0, 1, 45deg), opacity: 0}
+  },
+
+  rotateOutDownRight: {
+    '0%': {transform-origin: right bottom, opacity: 1},
+    '100%': {transform-origin: right bottom, transform: rotate3d(0, 0, 1, -45deg), opacity: 0}
+  },
+
+  rotateOutUpLeft: {
+    '0%': {transform-origin: left bottom, opacity: 1},
+    '100%': {transform-origin: left bottom, transform: rotate3d(0, 0, 1, -45deg), opacity: 0}
+  },
+
+  rotateOutUpRight: {
+    '0%': {transform-origin: right bottom, opacity: 1},
+    '100%': {transform-origin: right bottom, transform: rotate3d(0, 0, 1, 90deg), opacity: 0}
+  },
+
+  // Sliding Entrances
+
+  slideInDown: {
+    '0%': {transform: translate3d(0, -100%, 0), visibility: visible},
+    '100%': {transform: translate3d(0, 0, 0)}
+  },
+
+  slideInLeft: {
+    '0%': {transform: translate3d(-100%, 0, 0), visibility: visible},
+    '100%': {transform: translate3d(0, 0, 0)}
+  },
+
+  slideInRight: {
+    '0%': {transform: translate3d(100%, 0, 0), visibility: visible},
+    '100%': {transform: translate3d(0, 0, 0)}
+  },
+
+  slideInUp: {
+    '0%': {transform: translate3d(0, 100%, 0), visibility: visible},
+    '100%': {transform: translate3d(0, 0, 0)}
+  },
+
+  // Sliding Exits
+
+  slideOutDown: {
+    '0%': {transform: translate3d(0, 0, 0)},
+    '100%': {visibility: hidden, transform: translate3d(0, 100%, 0)}
+  },
+
+  slideOutLeft: {
+    '0%': {transform: translate3d(0, 0, 0)},
+    '100%': {visibility: hidden, transform: translate3d(-100%, 0, 0)}
+  },
+
+  slideOutRight: {
+    '0%': {transform: translate3d(0, 0, 0)},
+    '100%': {visibility: hidden, transform: translate3d(100%, 0, 0)}
+  },
+
+  slideOutUp: {
+    '0%': {transform: translate3d(0, 0, 0)},
+    '100%': {visibility: hidden, transform: translate3d(0, -100%, 0)}
+  },
+
+  // Specials
+
+  hinge: {
+    '0%': {transform-origin: top left, animation-timing-function: ease-in-out},
+    '20%': {transform: rotate3d(0, 0, 1, 80deg), transform-origin: top left, animation-timing-function: ease-in-out},
+    '40%': {transform: rotate3d(0, 0, 1, 60deg), transform-origin: top left, animation-timing-function: ease-in-out, opacity: 1},
+    '60%': {transform: rotate3d(0, 0, 1, 80deg), transform-origin: top left, animation-timing-function: ease-in-out},
+    '80%': {transform: rotate3d(0, 0, 1, 60deg), transform-origin: top left, animation-timing-function: ease-in-out, opacity: 1},
+    '100%': {transform: translate3d(0, 700px, 0), opacity: 0}
+  },
+
+  rollIn: {
+    '0%': {opacity: 0, transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg)},
+    '100%': {opacity: 1, transform: none}
+  },
+
+  rollOut: {
+    '0%': {opacity: 1},
+    '100%': {opacity: 0, transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg)}
+  },
+
+  // Zooming Entrances
+
+  zoomIn: {
+    '0%': {opacity: 0, transform: scale3d(.3, .3, .3)},
+    '50%': {opacity: 1}
+  },
+
+  zoomInDown: {
+    '0%': {opacity: 0, transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0), animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)},
+    '60%': {opacity: 1, transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0), animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)}
+  },
+
+  zoomInLeft: {
+    '0%': {opacity: 0, transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0), animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)},
+    '60%': {opacity: 1, transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0), animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)}
+  },
+
+  zoomInRight: {
+    '0%': {opacity: 0, transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0), animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)},
+    '60%': {opacity: 1, transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0), animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)}
+  },
+
+  zoomInUp: {
+    '0%': {opacity: 0, transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0), animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)},
+    '60%': {opacity: 1, transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0), animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)}
+  },
+
+  // Zooming Exits
+
+  zoomOut: {
+    '0%': {opacity: 1},
+    '50%': {opacity: 0, transform: scale3d(.3, .3, .3)},
+    '100%': {opacity: 0}
+  },
+
+  zoomOutDown: {
+    '40%': {opacity: 1, transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0), animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)},
+    '100%': {opacity: 0, transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0), transform-origin: center bottom, animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)}
+  },
+
+  zoomOutLeft: {
+    '40%': {opacity: 1, transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0)},
+    '100%': {opacity: 0, transform: scale(.1) translate3d(-2000px, 0, 0), transform-origin: left center}
+  },
+
+  zoomOutRight: {
+    '40%': {opacity: 1, transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0)},
+    '100%': {opacity: 0, transform: scale(.1) translate3d(2000px, 0, 0), transform-origin: right center}
+  },
+
+  zoomOutUp: {
+    '40%': {opacity: 1, transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0), animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)},
+    '100%': {opacity: 0, transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0), transform-origin: center bottom, animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)}
+  }
+
+}

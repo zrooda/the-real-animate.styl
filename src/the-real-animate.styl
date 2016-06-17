@@ -1,0 +1,49 @@
+@import 'animate-bank'
+
+// Config
+$__animateCaching = true
+$__animateDuration = 1000ms
+$__animateUsedKeyframes = ()
+
+// Mixin
+animate($name, $duration = $__animateDuration, $delay = null)
+  $extraProps = false
+  $cachedProps = ()
+  // Check bank
+  if $name in $__animateBank
+
+    // Check if keyframe is already rendered
+    if !($name in $__animateUsedKeyframes)
+      push($__animateUsedKeyframes, $name)
+
+      // Create keyframe entry
+      @keyframes {$name}
+        for $stop, $styles in $__animateBank[$name]
+          if $stop != default
+            {$stop}
+              for $prop, $value in $styles
+                {$prop}: $value
+                // Get props to accelerate
+                if $__animateCaching and !($prop in $cachedProps)
+                  push($cachedProps, $prop)
+          else
+            $extraProps = $styles
+
+    // Set animation properties on element
+    animation-name: $name
+    animation-duration: $duration
+    if $delay
+      animation-delay: $delay
+    animation-fill-mode: both // animate.css default
+
+    // Add extra animation defaults
+    if $extraProps
+      for $prop, $value in $extraProps
+        {$prop}: $value
+
+    // Hardware acceleration
+    if length($cachedProps) > 0
+      will-change: unquote(join(', ', $cachedProps))
+
+  else
+    error("'" + $name + "' not found in animation bank.")
